@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: url("./images/bg-pattern-top-mobile.svg");
+    background-repeat: no-repeat;
+}
+
+main {
+    padding: 3.2rem;
+}
+
+.user-stats {
+    display: grid;
+    gap: 3.2rem;
+}
+
+.intro {
+    max-width: 44.5rem;
+    justify-self: center;
+}
+
+.headline {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    color: hsl(300, 43%, 22%);
+    letter-spacing: -0.1rem;
+    line-height: 4.8rem;
+}
+
+.description {
+    font-size: 1.9rem;
+    font-weight: 500;
+    text-align: center;
+    color: rgb(146 123 145/ 1);
+    letter-spacing: -0.1rem;
+    line-height: 2.4rem;
+    margin-top: 2.7rem;
+}
+
+.ratings-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style: none;
+    gap: 1.6rem;
+}
+
+.rating-item {
+    width: 100%;
+    max-width: 44.5rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.6rem;
+    background: hsl(300, 24%, 96%);
+    padding: 20px 32px;
+    border-radius: 8px;
+}
+
+.rating-item::before {
+    content: " ";
+    width: 12rem;
+    height: 1.6rem;
+    background: url(images/icon-star.svg),
+                url(images/icon-star.svg),
+                url(images/icon-star.svg),
+                url(images/icon-star.svg),
+                url(images/icon-star.svg);
+    background-position: 0, 2.5rem, 5rem, 7.5rem, 10rem;
+    background-repeat: no-repeat;
+}
+
+.item-start {
+    align-self: flex-start;
+}
+
+.item-center {
+    align-self: center;
+}
+
+.item-end {
+    align-self: flex-end;
+}
+
+.rating-text {
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+/* Review Section */
+.review-section {
+    margin-top: 6.4rem;
+    font-size: 1.7rem;
+}
+
+.review-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    list-style: none;
+    gap: 1.6rem;
+}
+
+.review-item {
+    max-width: 35rem;
+    background: hsl(300, 43%, 22%);
+    padding: 4rem 3.2rem; /* padding-bottom: 3.9rem*/
+    border-radius: 8px;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 2.3rem;
+}
+
+.review-image {
+    width: 42px;
+    border-radius: 100px;
+}
+
+.reviewer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.reviewer-name {
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+}
+
+.reviewer-status {
+    color: hsl(333, 80%, 67%);
+}
+
+.review-text {
+    color: hsl(0, 0%, 100%);
+    line-height: 2.3rem;
+    letter-spacing: -0.30px;
+    margin-top: 2.6rem;
+}
+
+@media screen and (min-width: 600px) {
+    .headline {
+        font-size: 4.4rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        /* max-width: 1174px; */
+        max-width: 117.4rem;
+    }
+
+    .headline {
+        font-size: 4.6rem;
+    }
+    
+    .rating-item {
+        flex-direction: row;
+    }
+
+    .review-list {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* .review-item {
+        max-width: none;
+    } */
+}
+
+@media screen and (min-width: 1000px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: url("./images/bg-pattern-top-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: initial;
+    }
+
+    main {
+        padding: 1.6rem 3.2rem;
+    }
+
+    .user-stats {
+        align-items: center;
+    }
+
+    .intro {
+        justify-self: flex-start;
+    }
+
+    .headline {
+        font-size: 5.4rem;
+        text-align: start;
+    }
+
+    .description {
+        text-align: start;
+    }
+
+    .review-list {
+        justify-content: flex-start;
+        min-height: 26.6rem;
+        gap: 3rem;
+    }
+
+    .review-item {
+        max-width: 35rem;
+    }
+
+    .user-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+}
